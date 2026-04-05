@@ -1,0 +1,29 @@
+[package]
+name = "apex-core"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+description = "Core protocol implementation for the APEX Layer 1 blockchain"
+license = "Apache-2.0"
+repository = "https://github.com/apex-protocol/apex-core"
+keywords = ["blockchain", "post-quantum", "layer1", "cryptography"]
+categories = ["cryptography", "network-programming"]
+
+[lib]
+name = "apex_core"
+path = "src/lib.rs"
+
+[dependencies]
+serde      = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha3       = "0.10"
+blake3     = "1.5"
+hex        = "0.4"
+thiserror  = "1.0"
+anyhow     = "1.0"
+tracing    = "0.1"
+bytes      = "1.5"
+zeroize    = { version = "1.7", features = ["derive"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
